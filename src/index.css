@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blueberry-deep: #2e1065;
+  --blueberry-rich: #4c1d95;
+  --cream: #fdf9f3;
+  --warm-brown: #5c4033;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream-50 text-gray-900 font-sans antialiased;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f3ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6d28d9;
+}
+
+/* Selection */
+::selection {
+  background: #c4b5fd;
+  color: #2e1065;
+}
+
+/* Utility classes */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* 3D carousel perspective */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Smooth image loading */
+img {
+  @apply transition-opacity duration-500;
+}
+
+/* Magnetic button effect helper */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
